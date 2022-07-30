@@ -320,7 +320,7 @@
         </div>
     </div>
 
-    <div class="posrtFlioBox3dBdy" style="position: relative;">
+    <div class="posrtFlioBox3dBdy" id='TouchP' style="position: relative;">
 
         <div class="mainBodyInner">
             <div>
@@ -355,6 +355,7 @@
     </div>
     <script>
         let v = document.querySelector('.mainBodyInner');
+        let TouchP = document.querySelector('#TouchP');
         let vpad = document.getElementById('pad');
         // var yv = 40;
         // var isPressed=false;
@@ -365,7 +366,7 @@
         // }
         
         if(window.innerWidth<=991){
-                window.ontouchmove = function(e){
+                TouchP.ontouchmove = function(e){
                 //v.style.transform = "rotateX("+-6+"deg) rotateY("+e.clientX+"deg)";
             
                 
