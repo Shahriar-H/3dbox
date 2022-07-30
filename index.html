@@ -369,9 +369,9 @@
                 //v.style.transform = "rotateX("+-6+"deg) rotateY("+e.clientX+"deg)";
             
                 
-                    v.style.transform = "rotateX("+-6+"deg) rotateY("+e.clientX+"deg)";
+                    v.style.transform = "rotateX("+-6+"deg) rotateY("+e.touches[0].clientX+"deg)";
                 
-                console.log('Y: '+e.clientX);
+                console.log('Y: '+e.touches[0].clientX);
                 console.log(isPressed);
             }
         }else{
