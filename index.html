@@ -10,8 +10,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- Fontawsome cdn link  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./Sources/style.css">
      <!-- font link of google -->
+
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
@@ -25,10 +27,17 @@
     <!-- first section start  -->
     <div class="section1">
         <div class="introname">
-            <h1>Shahariar Hussain</h1>
-            <p><span>Web Developer</span> | <span>Android Developer</span> | <span>Programmer</span></p>
-            <p class="aboutme">Hi, I am a software developer, web and android. I am working as web developer since 2020 but I have recently join in Android.  </p>
-            <div class="buttondiv">
+            <div style="width: fit-content;" class="overAnim" data-aos="slide-right" data-aos-duration="300">
+                <h1>Shahariar Hussain</h1>
+            </div>
+            <p class="overAnim" data-aos="slide-right" data-aos-duration="300"><span>Web Developer</span> | <span>Android Developer</span> | <span>Programmer</span></p>
+            <div class="overAnim" style="width: fit-content;" data-aos="slide-right" data-aos-duration="300">
+                <p class="aboutme">Hi, I am a software developer, web and android. 
+                    I am working as web developer since 2020 but 
+                    I have recently join in Android. 
+                </p>
+            </div>
+            <div data-aos="slide-up" data-aos-duration="1000" class="buttondiv">
                 <a href="https://drive.google.com/file/d/11MBNRop55DGYZhAhBhNE9bGAcItoaFbM/view?usp=sharing">Download Resume</a>
             </div>
         </div>
@@ -46,7 +55,10 @@
 
      <div class="section2">
          <div class="aboutme">
-            <h2 class="headtag">About Me</h2>
+            <div class="overAnim" data-aos="slide-right" data-aos-duration="200">
+                <h2 class="headtag">About Me</h2>
+            </div>
+            
              <p>As you know I am Shahriar Hussain, a software developer. 
                  I have started my journey in this sector on 2019. 
                  Now I'm working at a software firm as a part-time software developer. PHP, JavaScript(React, React native is realy awesome).
@@ -320,7 +332,7 @@
         </div>
     </div>
 
-    <div class="posrtFlioBox3dBdy" id='TouchP' style="position: relative;">
+    <div class="posrtFlioBox3dBdy" style="position: relative;">
 
         <div class="mainBodyInner">
             <div>
@@ -355,50 +367,20 @@
     </div>
     <script>
         let v = document.querySelector('.mainBodyInner');
-        let TouchP = document.querySelector('#TouchP');
         let vpad = document.getElementById('pad');
-        // var yv = 40;
-        // var isPressed=false;
-        // function getSlideRight(){
-        //     yv=yv-20;
-        //     v.style.transform = "rotateX("+-6+"deg) rotateY("+yv+"deg)";
-        //     // v.classList.add('amin')
-        // }
-        
-        if(window.innerWidth<=991){
-                TouchP.ontouchmove = function(e){
+        if(window.innerWidth<992){
+                window.onmousemove = function(e){
                 //v.style.transform = "rotateX("+-6+"deg) rotateY("+e.clientX+"deg)";
-            
-                
-                    v.style.transform = "rotateX("+-6+"deg) rotateY("+e.touches[0].clientX+"deg)";
-                
-                console.log('Y: '+e.touches[0].clientX);
-                console.log(isPressed);
+                v.style.transform = "rotateX("+-6+"deg) rotateY("+e.clientX+"deg)";
+               
             }
         }else{
             vpad.onmousemove = function(e){
-                //v.style.transform = "rotateX("+-6+"deg) rotateY("+e.clientX+"deg)";
-            
-                
-                    v.style.transform = "rotateX("+-6+"deg) rotateY("+e.clientX+"deg)";
-                
-                console.log('Y: '+e.clientX);
-                console.log(isPressed);
-                }
+                v.style.transform = "rotateX("+-6+"deg) rotateY("+e.clientX+"deg)";
+            }
         }
 
-        // var el = document.getElementById('demo');
-        // el.addEventListener('long-press', function(e) {
-        //     window.onmousemove = function(e){
-        //         console.log('Y: '+e.clientX);
-        //         if(e.clientX>800){
-        //             yv=yv-20;
-        //             return v.style.transform = "rotateX("+-6+"deg) rotateY("+e.clientX+"deg)";
-                    
-        //         }
-        //     }
-        // });
-            console.log(window.innerWidth);
+
 
     </script>
 
@@ -424,7 +406,10 @@
     </div>
 
 
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script>
         function scrollleft(){
             document.querySelector(".section5CoverDiv").scrollBy(-100,0);
