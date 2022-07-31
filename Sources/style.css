@@ -787,6 +787,8 @@ transition: transform .8s ease-in-out;
     -ms-transition: 1.5s;
     -o-transition: 1.5s;
     width: fit-content !important;
+    animation: hideShowanim1 1s linear;
+    -webkit-animation: hideShowanim1 1s linear;
 }
 .overAnim::after{
     content: '';
@@ -800,7 +802,15 @@ transition: transform .8s ease-in-out;
     overflow: hidden;
     animation: hideShowanim 1.5s linear;
     -webkit-animation: hideShowanim 1.5s linear;
-   
+    animation-delay: 0s;
+}
+@keyframes hideShowanim1 {
+    0%{
+        margin-left:-200px ;
+
+    }100%{
+        margin-left: 0px;
+    }
 }
 @keyframes hideShowanim {
     0%{
