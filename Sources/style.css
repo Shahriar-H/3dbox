@@ -2,7 +2,6 @@
     font-family: 'Bree Serif', serif !important;
     box-sizing: border-box;
     padding: 0 !important;
-    margin: 0 !important;
 }
 html{
     scrollbar-width: thin !important;
@@ -702,10 +701,10 @@ footer a{
     width: 500px;
     position: relative;
     transition: 01s linear ease-in-out;
-    -webkit-transition: transform 1s ease-in-out;
-    -moz-transition: transform 1s ease-in-out;
-    -ms-transition: transform 1s ease-in-out;
-    -o-transition: transform 1s ease-in-out;
+    -webkit-transition: 01s linear ease-in-out;
+    -moz-transition: 01s linear ease-in-out;
+    -ms-transition: 01s linear ease-in-out;
+    -o-transition: 01s linear ease-in-out;
     -webkit-transition: -webkit-transform .8s ease-in-out;
     -ms-transition: -ms-transform .8s ease-in-out;
     transition: transform 1s ease-in-out;
@@ -780,9 +779,59 @@ transition: transform .8s ease-in-out;
     background-color: white;
     
 }
+.overAnim{
+    position: relative;
+    transition: 1.5s;
+    -webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+    -ms-transition: 1.5s;
+    -o-transition: 1.5s;
+    width: fit-content !important;
+}
+.overAnim::after{
+    content: '';
+    height: 100%;
+    width: 0px;
+    background-color: red;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    animation: hideShowanim 1.5s linear;
+    -webkit-animation: hideShowanim 1.5s linear;
+    animation-delay: 1.5s;
+}
+@keyframes hideShowanim {
+    0%{
+       width: 100%;
+       left: 0px;
+    }40%{
+        width: 100%;
+       left: 0px;
+    }100%{
+        width: 0px;
+        left: 700px;
+    }
+}
 
-
-
+.leftCommingAnim{
+    animation: comeFromLeft 0.4s linear;
+    -webkit-animation: comeFromLeft 0.4s linear;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    margin-left:0px;
+}
+@keyframes comeFromLeft {
+    from{
+        margin-left: -100px !important;
+    }to{
+        margin-left: 0px !important;
+    }
+}
 
 
 
