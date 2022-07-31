@@ -816,7 +816,7 @@ transition: transform .8s ease-in-out;
     0%{
        width: 100%;
        left: 0px;
-    }40%{
+    }80%{
         width: 100%;
        left: 0px;
     }100%{
