@@ -800,7 +800,7 @@ transition: transform .8s ease-in-out;
     overflow: hidden;
     animation: hideShowanim 1.5s linear;
     -webkit-animation: hideShowanim 1.5s linear;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
 }
 @keyframes hideShowanim {
     0%{
